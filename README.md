@@ -13,7 +13,7 @@ Evernota, a simple task management.
 ## How to use
 You can test the applcation on Heroku or on your machine.
 ### Online on Heroku
-You can use on this link ![here](https://intelligent-choucroute-43849.herokuapp.com/). The application is hosted on Heroku, so the first access will take a while (30 seconds-ish) to load the web application, but just for the first time.
+You can use on this link [here](https://intelligent-choucroute-43849.herokuapp.com/). The application is hosted on Heroku, so the first access will take a while (30 seconds-ish) to load the web application, but just for the first time.
 
 ### On your localhost
 1. Download or clone the code.
