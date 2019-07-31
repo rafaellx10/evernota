@@ -4,35 +4,41 @@
 <meta charset="UTF-8">
 <title>Evernota - Inserção de nova tarefa</title>
 <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/style.css" />
+<meta name="viewport"
+	content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,shrink-to-fit=no">
 </head>
 <body>
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark"
 		th:fragment="cabecalho">
-		<a class="navbar-brand" href="#">Gerenciador de tarefas</a>
+		<a class="navbar-brand" href="/login">Gerenciador de tarefas</a>
 	</nav>
-	<div class="container">
-		<h3>Inclusão de novo Usuário</h3>
+	<div class="container mt-60">
+		<h3 class="col-md-8 offset-md-3">Crie uma nova conta</h3>
 
-		<form class="form-horizontal" action="/registration" method="post" th:object="${usuario}">
+		<form class="form-horizontal" action="/registration" method="post"
+			th:object="${usuario}">
 			<div class="row">
-				<div class="form-group col-md-6">
-					<div class="alert alert-danger" role="alert" th:if="${#fields.hasErrors('email')}">
+				<div class="form-group col-md-6 offset-md-3">
+					<div class="alert alert-danger" role="alert"
+						th:if="${#fields.hasErrors('email')}">
 						<label th:errors="*{email}" class="validation-message"></label>
 					</div>
-					<label>E-mail:</label> 
-					<input type="text" class="form-control" th:field="*{email}">
+					<label>E-mail:</label> <input type="text" class="form-control"
+						th:field="*{email}">
 				</div>
 			</div>
 			<div class="row">
-				<div class="form-group col-md-6">
-					<div class="alert alert-danger" role="alert" th:if="${#fields.hasErrors('senha')}">
+				<div class="form-group col-md-6 offset-md-3">
+					<div class="alert alert-danger" role="alert"
+						th:if="${#fields.hasErrors('senha')}">
 						<label th:errors="*{senha}" class="validation-message"></label>
 					</div>
-					<label>Senha:</label> 
-					<input type="password" class="form-control" th:field="*{senha}">
+					<label>Senha:</label> <input type="password" class="form-control"
+						th:field="*{senha}">
 				</div>
 			</div>
-			<button type="submit" class="btn btn-primary">Salvar!</button>
+			<button type="submit" class="btn btn-primary offset-md-3">Salvar!</button>
 		</form>
 	</div>
 	<script src="/webjars/jquery/3.4.1/jquery.min.js"></script>

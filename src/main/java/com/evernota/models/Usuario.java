@@ -33,6 +33,7 @@ public class Usuario {
 	@Length(min = 5, max = 100, message = "a senha deve conter entre mais que 5 caracteres.")
 	private String senha;
 	
+
 	@OneToMany(mappedBy = "usuario", fetch = FetchType.LAZY)
 	private List<Tarefa> tarefas;
 

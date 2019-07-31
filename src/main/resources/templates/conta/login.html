@@ -4,40 +4,43 @@
 <meta charset="UTF-8">
 <title>Evernota - Login</title>
 <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/style.css" />
+<meta name="viewport"
+	content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,shrink-to-fit=no">
 </head>
 <body>
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark"
 		th:fragment="cabecalho">
-		<a class="navbar-brand" href="#">Gerenciador de tarefas</a>
+		<a class="navbar-brand" href="/login">Gerenciador de tarefas</a>
 	</nav>
 
 	<div class="container">
-		<h3>Login</h3>
+		<h3 class="col-md-8 offset-md-2 mt-60">Login</h3>
 		<form action="/login" method="post" class="form-signin">
 			<div class="form-group">
-				<div class="col-md-9">
+				<div class="col-md-8 offset-md-2">
 					<input type="text" class="form-control" placeholder="E-mail"
 						name="email">
 				</div>
 			</div>
 			<div class="form-group">
-				<div class="col-md-9">
+				<div class="col-md-8 offset-md-2">
 					<input type="password" class="form-control" placeholder="Senha"
 						name="senha">
 				</div>
 			</div>
-			<div class="form-group">
+			<div class="form-group col-md-8 offset-md-2">
 				<button type="submit" class="btn btn-primary">Login</button>
 			</div>
 			<div class="form-group">
-				<div class="col-md-9">
+				<div class="col-md-8 offset-md-2">
 					<div class="alert alert-danger" role="alert" th:if="${param.error}">
-						Não foi possível fazer o login.
-					</div>
+						Não foi possível fazer o login.</div>
 				</div>
 			</div>
-			<div class="form-group">
-				<span>Não possui conta?<a href="/registration">Registra-se Aqui</a></span>
+			<div class="form-group col-md-8 offset-md-2">
+				<span>Não possui conta?<a href="/registration">Registra-se
+						Aqui</a></span>
 			</div>
 		</form>
 

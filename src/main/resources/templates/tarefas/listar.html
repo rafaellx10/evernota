@@ -4,6 +4,8 @@
 <meta charset="UTF-8">
 <title>Evernota - Listagem de tarefas</title>
 <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/style.css"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,shrink-to-fit=no">
 </head>
 <body>
 	<div th:replace="fragmentos/fragmentos :: cabecalho"></div>
@@ -18,8 +20,9 @@
 					<p class="card-text"
 						th:text="${'Data de expiração: '+ 
 						#dates.format(tarefa.dataExpiracao, 'dd/MM/yyyy')}"></p>
-					<p class="card-text" style="color: green;"th:if="${tarefa.dataExpiracao.after(new java.util.Date())}" >Em dia</p>
-					<p class="card-text" style="color: red;"th:if="${tarefa.dataExpiracao.before(new java.util.Date())}" >Atrasada</p>
+					
+					<p class="card-text" style="color: green;"th:if="${tarefa.dataExpiracao.after(new java.util.Date()) && !tarefa.concluida}" >Em dia</p>
+					<p class="card-text" style="color: red;"th:if="${tarefa.dataExpiracao.before(new java.util.Date()) && !tarefa.concluida}" >Atrasada</p>
 				</div>
 			<div class="card-footer bg-light">
 				<p>

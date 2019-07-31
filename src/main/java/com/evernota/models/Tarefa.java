@@ -30,8 +30,8 @@ public class Tarefa {
 	@Length(max = 50, min = 3, message = "O título deve conter entre 3 e 50 caracteres")
 	private String titulo;
 
-	@Column(name = "tar_descricao", length = 100, nullable = true)
-	@Length(max = 100, message = "A descrição deve conter até 100 caracteres")
+	@Column(name = "tar_descricao", length = 260, nullable = true)
+	@Length(max = 100, message = "A descrição deve conter até 260 caracteres")
 	private String descricao;
 
 	@Column(name = "tar_data_expiracao", nullable = false)
@@ -42,7 +42,7 @@ public class Tarefa {
 	private Boolean concluida = false;
 
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "usr_id")
+	@JoinColumn(name = "usr_id", unique = true)
 	private Usuario usuario;
 
 	public Usuario getUsuario() {
