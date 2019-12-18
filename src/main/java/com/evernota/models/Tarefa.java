@@ -31,7 +31,7 @@ public class Tarefa {
 	private String titulo;
 
 	@Column(name = "tar_descricao", length = 260, nullable = true)
-	@Length(max = 100, message = "A descrição deve conter até 260 caracteres")
+	@Length(max = 260, message = "A descrição deve conter até 260 caracteres")
 	private String descricao;
 
 	@Column(name = "tar_data_expiracao", nullable = false)
@@ -60,7 +60,7 @@ public class Tarefa {
 	public void setId(Long id) {
 		this.id = id;
 	}
-
+	
 	public String getTitulo() {
 		return titulo;
 	}
